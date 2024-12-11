@@ -12,7 +12,7 @@ export function listPost(query) {
 // 查询岗位详细
 export function getPost(postId) {
   return request({
-    url: '/sysPost/' + postId,
+    url: '/sysPost/get/' + postId,
     method: 'get'
   })
 }
@@ -29,7 +29,7 @@ export function addPost(data) {
 // 修改岗位
 export function updatePost(data) {
   return request({
-    url: '/sysPost/' + data.postId,
+    url: '/sysPost/update/' + data.postId,
     method: 'patch',
     data: data
   })

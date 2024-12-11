@@ -12,7 +12,7 @@ export function listConfig(query) {
 // 查询参数详细
 export function getConfig(configId) {
   return request({
-    url: '/sysConfig/' + configId,
+    url: '/sysConfig/get/' + configId,
     method: 'get'
   })
 }
@@ -38,7 +38,7 @@ export function addConfig(data) {
 // 修改参数配置
 export function updateConfig(data) {
   return request({
-    url: '/sysConfig/' + data.configId,
+    url: '/sysConfig/update/' + data.configId,
     method: 'patch',
     data: data
   })

@@ -21,7 +21,7 @@ export function listRoleAll(query) {
 // 查询角色详细
 export function getRole(roleId) {
   return request({
-    url: '/sysRole/' + roleId,
+    url: '/sysRole/get/' + roleId,
     method: 'get'
   })
 }

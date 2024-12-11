@@ -20,7 +20,7 @@ export function listDeptExcludeChild(deptId) {
 // 查询部门详细
 export function getDept(deptId) {
   return request({
-    url: '/sysDept/' + deptId,
+    url: '/sysDept/get/' + deptId,
     method: 'get'
   })
 }
@@ -37,7 +37,7 @@ export function addDept(data) {
 // 修改部门
 export function updateDept(data) {
   return request({
-    url: '/sysDept/' + data.deptId,
+    url: '/sysDept/update/' + data.deptId,
     method: 'patch',
     data: data
   })

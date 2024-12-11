@@ -12,7 +12,7 @@ export function listMenu(query) {
 // 查询菜单详细
 export function getMenu(menuId) {
   return request({
-    url: '/sysMenu/' + menuId,
+    url: '/sysMenu/get/' + menuId,
     method: 'get'
   })
 }
@@ -46,7 +46,7 @@ export function addMenu(data) {
 // 修改菜单
 export function updateMenu(data) {
   return request({
-    url: '/sysMenu/' + data.menuId,
+    url: '/sysMenu/update/' + data.menuId,
     method: 'patch',
     data: data
   })
