@@ -82,6 +82,10 @@ const user = {
           removeToken()
           resolve()
         }).catch(error => {
+          commit('SET_TOKEN', '')
+          commit('SET_ROLES', [])
+          commit('SET_PERMISSIONS', [])
+          removeToken()
           reject(error)
         })
       })
