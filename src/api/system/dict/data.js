@@ -12,7 +12,7 @@ export function listData(query) {
 // 查询字典数据详细
 export function getData(dictCode) {
   return request({
-    url: '/sysDictData/' + dictCode,
+    url: '/sysDictData/get/' + dictCode,
     method: 'get'
   })
 }
@@ -37,7 +37,7 @@ export function addData(data) {
 // 修改字典数据
 export function updateData(data) {
   return request({
-    url: '/sysDictData/' + data.dictCode,
+    url: '/sysDictData/update/' + data.dictCode,
     method: 'patch',
     data: data
   })
