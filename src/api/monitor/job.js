@@ -44,10 +44,10 @@ export function delJob(jobId) {
 }
 
 // 任务状态修改
-export function changeJobStatus(jobId, status) {
+export function changeJobStatus(jobId, jobStatus) {
   const data = {
     jobId,
-    status
+    jobStatus
   }
   return request({
     url: '/sysJob/changeStatus',
