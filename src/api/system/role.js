@@ -77,7 +77,7 @@ export function delRole(roleId) {
 // 查询角色已授权用户列表
 export function allocatedUserList(query) {
   return request({
-    url: '/system/role/authUser/allocatedList',
+    url: '/sysRole/authUser/allocatedList',
     method: 'get',
     params: query
   })
@@ -86,7 +86,7 @@ export function allocatedUserList(query) {
 // 查询角色未授权用户列表
 export function unallocatedUserList(query) {
   return request({
-    url: '/system/role/authUser/unallocatedList',
+    url: '/sysRole/authUser/unallocatedList',
     method: 'get',
     params: query
   })
@@ -95,8 +95,8 @@ export function unallocatedUserList(query) {
 // 取消用户授权角色
 export function authUserCancel(data) {
   return request({
-    url: '/system/role/authUser/cancel',
-    method: 'put',
+    url: '/sysRole/authUser/cancel',
+    method: 'patch',
     data: data
   })
 }
@@ -104,8 +104,8 @@ export function authUserCancel(data) {
 // 批量取消用户授权角色
 export function authUserCancelAll(data) {
   return request({
-    url: '/system/role/authUser/cancelAll',
-    method: 'put',
+    url: '/sysRole/authUser/cancelAll',
+    method: 'patch',
     params: data
   })
 }
@@ -113,8 +113,8 @@ export function authUserCancelAll(data) {
 // 授权用户选择
 export function authUserSelectAll(data) {
   return request({
-    url: '/system/role/authUser/selectAll',
-    method: 'put',
+    url: '/sysRole/authUser/selectAll',
+    method: 'patch',
     params: data
   })
 }
