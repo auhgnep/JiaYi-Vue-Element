@@ -433,7 +433,7 @@ export default {
         deptIds: [],
         menuCheckStrictly: true,
         deptCheckStrictly: true,
-        remark: undefined
+        remark: undefined,
       };
       this.resetForm("form");
     },
@@ -541,6 +541,7 @@ export default {
       const deptTreeSelect = this.getDeptTree(row.roleId);
       getRole(row.roleId).then(response => {
         this.form = response.data;
+        this.form.deptCheckStrictly = false
         this.openDataScope = true;
         this.$nextTick(() => {
           deptTreeSelect.then(res => {
@@ -600,7 +601,7 @@ export default {
     },
     /** 导出按钮操作 */
     handleExport() {
-      this.download('system/role/export', {
+      this.download('sysRole/export', {
         ...this.queryParams
       }, `role_${new Date().getTime()}.xlsx`)
     }
