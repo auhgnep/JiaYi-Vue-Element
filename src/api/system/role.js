@@ -106,7 +106,7 @@ export function authUserCancelAll(data) {
   return request({
     url: '/sysRole/authUser/cancelAll',
     method: 'patch',
-    params: data
+    data: data
   })
 }
 
@@ -115,7 +115,7 @@ export function authUserSelectAll(data) {
   return request({
     url: '/sysRole/authUser/selectAll',
     method: 'patch',
-    params: data
+    data: data
   })
 }
 
