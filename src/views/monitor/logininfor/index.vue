@@ -106,9 +106,9 @@
       <el-table-column label="登录地点" align="center" prop="loginLocation" :show-overflow-tooltip="true" />
       <el-table-column label="浏览器" align="center" prop="browser" :show-overflow-tooltip="true" />
       <el-table-column label="操作系统" align="center" prop="os" />
-      <el-table-column label="登录状态" align="center" prop="status">
+      <el-table-column label="登录状态" align="center" prop="loginStatus">
         <template slot-scope="scope">
-          <dict-tag :options="dict.type.sys_common_status" :value="scope.row.status"/>
+          <dict-tag :options="dict.type.sys_common_status" :value="scope.row.loginStatus"/>
         </template>
       </el-table-column>
       <el-table-column label="操作信息" align="center" prop="msg" :show-overflow-tooltip="true" />
